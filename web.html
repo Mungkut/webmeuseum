@@ -6,12 +6,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
-                .flex-container {
+    #image-container {
+      display: none; 
+      margin-top: 20px;
+    }
+        .flex-container {
             display: flex;
             gap: 10px;
             justify-content: space-around;
             margin-top: 20px;
             font-size: 16px;
+        }
+        .decorated:hover {
+            background-color: #ffdad6;
         }
 
         .decorated-box {
@@ -32,20 +39,33 @@
     <h2>พิพิธภัณฑ์ศิลปะของศิลปินทั้ง 3 </h2>
     <div id="main-container">
         <div class="flex-container">
-            <div class="decorated-box">Map</div>
+            <div class="decorated-box decorated">Map</div>
     </div>
+<!--จบโค้ดแมป-->
     <div class="flex-container">
         <div class="decorated-box decorated">Mungkut
             <div class="flex-container">น.ส.ปัณณธร โสภาวรรณ</div>
+            <button onclick="showImages()">ภาพตัวอย่างของศิลปิน</button>
+            <div id="image-container">
+                <img src="https://drive.google.com/file/d/1MZMAoB6NsVZp7SpR4UFu7UzN5w784Ms1/view?usp=drive_link"alt="" height="300" width="300">
+                <img src="https://via.placeholder.com/200?text=หมา">
+                <img src="https://via.placeholder.com/200?text=นก">
+            </div>
         </div>
+<!--จบของตัวเอง-->
         <div class="decorated-box decorated">Kana_ZaZa
             <div class="flex-container">น.ส.มนัสนันท์ ภูมิพัฒนพงศ์</div>
         </div>
-        <div class="decorated-box">Pnutt
+<!--จบของกาน-->
+        <div class="decorated-box decorated">Pnutt
             <div class="flex-container">นายปรินทร อินทโชติ</div>
         </div>
-    
-    
-    
+    </div>
+<!--จบของไอ่เอิ้ด-->
+    <script>
+        function showImages() {
+            document.getElementById('image-container').style.display = 'block';
+         }
+     </script>
 </body>
 </html>
