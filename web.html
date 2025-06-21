@@ -6,10 +6,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        header {
+            background-color: #9006ba;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            font-size: 64px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+        }
+        .profile {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10%;
+            
+        }
+        .pic{
+            width: 400px;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10%;
+        }
     #image-container {
-      display: none; 
-      margin-top: 20px;
+
+        display: none; 
+        margin-top: 20px;
+
     }
+
+    #image-container-kan {
+        
+        display: none; 
+        margin-top: 20px;
+    
+    }
+
+    #image-container-E {
+        
+        display: none; 
+        margin-top: 20px;
+    
+    }
+    
         .flex-container {
             display: flex;
             gap: 10px;
@@ -18,7 +65,7 @@
             font-size: 16px;
         }
         .decorated:hover {
-            background-color: #ffdad6;
+            background-color: #db96e9;
         }
 
         .decorated-box {
@@ -35,37 +82,83 @@
 <body>
     <header>
         <h1>Magic Museum</h1>
+        <h2>พิพิธภัณฑ์ศิลปะของศิลปินทั้ง 3 </h2>
     </header>
-    <h2>พิพิธภัณฑ์ศิลปะของศิลปินทั้ง 3 </h2>
     <div id="main-container">
         <div class="flex-container">
             <div class="decorated-box decorated">Map</div>
     </div>
 <!--จบโค้ดแมป-->
-    <div class="flex-container">
-        <div class="decorated-box decorated">Mungkut
+    <button onclick="showImages()">
+        <div class="flex-container">
+            <div class="decorated-box decorated">
+            <img class="profile" src="https://i.postimg.cc/hGzTSndX/774-20250515203426.png">
+            <div class="decorated">Mungkut</div>
             <div class="flex-container">น.ส.ปัณณธร โสภาวรรณ</div>
-            <button onclick="showImages()">ภาพตัวอย่างของศิลปิน</button>
             <div id="image-container">
-                <img src="https://drive.google.com/file/d/1MZMAoB6NsVZp7SpR4UFu7UzN5w784Ms1/view?usp=drive_link"alt="" height="300" width="300">
-                <img src="https://via.placeholder.com/200?text=หมา">
-                <img src="https://via.placeholder.com/200?text=นก">
+                <img class="pic" src="https://i.postimg.cc/brXTXJVY/p8.jpg">
+                <img class="pic" src="https://i.postimg.cc/wxJ2XX31/p7.jpg">
+                <img class="pic" src="https://i.postimg.cc/KvD5VmPF/p6.jpg">
+                <img class="pic" src="https://i.postimg.cc/jdbXZDJZ/p5.jpg">
+                <img class="pic" src="https://i.postimg.cc/13RK1bBF/p4.jpg">
+                <img class="pic" src="https://i.postimg.cc/Mpsm6t3F/p3.jpg">
+                <img class="pic" src="https://i.postimg.cc/Jhv3J0L3/p2.jpg">
+                <img class="pic" src="https://i.postimg.cc/1tFGKSmk/p1.jpg">
+                <img class="pic" src="https://i.postimg.cc/QCrp4zVH/p.jpg">
             </div>
         </div>
+    </button>
 <!--จบของตัวเอง-->
-        <div class="decorated-box decorated">Kana_ZaZa
+    <button onclick="showImagesKan()">
+        <div class="flex-container">
+        <div class="decorated-box decorated">
+            <img class="profile" src="https://i.postimg.cc/vH0VfT71/kan1.png">
+            <div class="decorated">Kana_ZaZa</div>
             <div class="flex-container">น.ส.มนัสนันท์ ภูมิพัฒนพงศ์</div>
+            <div id="image-container-kan">
+                <img class="pic" src="https://i.postimg.cc/fLQtD9sP/kan2.png">
+                <img class="pic" src="https://i.postimg.cc/ZqdBGLG3/kan3.png">
+                <img class="pic" src="https://i.postimg.cc/QCbW6xRy/kan4.png">
+                <img class="pic" src="https://i.postimg.cc/6qwvLG1Z/kan5.png">
+                <img class="pic" src="https://i.postimg.cc/cL68mWTF/kan6.png">
+                <img class="pic" src="https://i.postimg.cc/JnjXkQKm/kan7.png">
+                <img class="pic" src="https://i.postimg.cc/25svytQ2/kan8.png">
+            </div>
         </div>
+    </button>
 <!--จบของกาน-->
-        <div class="decorated-box decorated">Pnutt
+<button onclick="showImagesE()">
+    <div class="flex-container">
+        <div class="decorated-box decorated">            
+            <img class="profile" src="https://i.postimg.cc/ZKHrHVm5/1.jpg">
+            <div class="decorated">Pnutt</div>
             <div class="flex-container">นายปรินทร อินทโชติ</div>
+            <div id="image-container-E">
+                <img class="pic" src="https://i.postimg.cc/rFM157vH/4.jpg">
+                <img class="pic" src="https://i.postimg.cc/mkN70SFV/6.jpg">
+                <img class="pic" src="https://i.postimg.cc/kghW3GBr/3.jpg">
+                <img class="pic" src="https://i.postimg.cc/HkLbhXW4/2.jpg">
+                <img class="pic" src="https://i.postimg.cc/8khdJTnW/5.jpg">
+            </div>
         </div>
     </div>
+</button>
 <!--จบของไอ่เอิ้ด-->
-    <script>
-        function showImages() {
-            document.getElementById('image-container').style.display = 'block';
-         }
-     </script>
+<script>
+  function showImages() {
+    const imageContainer = document.getElementById('image-container');
+    imageContainer.style.display = (imageContainer.style.display === 'block') ? 'none' : 'block';
+  }
+  function showImagesKan() {
+    const imageContainer = document.getElementById('image-container-kan');
+    imageContainer.style.display = (imageContainer.style.display === 'block') ? 'none' : 'block';
+  }
+  function showImagesE() {
+    const imageContainer = document.getElementById('image-container-E');
+    imageContainer.style.display = (imageContainer.style.display === 'block') ? 'none' : 'block';
+  }
+</script>
+<!--คริปbutton-->
+
 </body>
 </html>
